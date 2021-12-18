@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFtutorial"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WPF Demo" Height="350" Width="525">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -20,8 +20,15 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="36" 
+                  Grid.ColumnSpan="3" Text="Hello Alex"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="First Name" FontWeight="Bold" FontFamily="Segoe UI"/>
+        <TextBox x:Name="firstNameText" Margin="5 0 0 0" Grid.Row="2" Grid.Column="2" Width="150"/>
+        <Button x:Name="submitButton" Content="Run Me" Grid.Column="1"
+                Margin="10" Grid.Row="3" Grid.ColumnSpan="2" Click="submitButton_Click"/>
     </Grid>
 </Window>
